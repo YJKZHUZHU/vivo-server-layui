@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>商品发布</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="../../layuiadmin/style/admin.css"  media="all">
 </head>
 <body>
-
+    <div class="layui-fluid">
+        <form action="" class="layui-form">
+            <div class="layui-form-item">
+                <label for="" class="layui-form-label">标题</label>
+                <div class="layui-input-block" style="width: 400px">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input ">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="" class="layui-form-label">简介</label>
+                <div class="layui-input-block" style="widows: 400px;">
+                    <input type="text" name="summary" lay-verify="title" autocomplete="off" placeholder="请输入手机简介" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">价格</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <input type="text" name="price" placeholder="￥" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
