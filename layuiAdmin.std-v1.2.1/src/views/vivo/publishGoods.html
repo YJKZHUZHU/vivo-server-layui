@@ -8,31 +8,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css"  media="all">
     <link rel="stylesheet" href="../../layuiadmin/style/admin.css"  media="all">
+    <style>
+        .layui-upload-img {
+            width: 92px;
+            height: 92px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="layui-fluid">
-        <form action="" class="layui-form">
-            <div class="layui-form-item">
-                <label for="" class="layui-form-label">标题</label>
-                <div class="layui-input-block" style="width: 400px">
-                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input ">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="" class="layui-form-label">简介</label>
-                <div class="layui-input-block" style="widows: 400px;">
-                    <input type="text" name="summary" lay-verify="title" autocomplete="off" placeholder="请输入手机简介" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-inline">
-                    <label class="layui-form-label">价格</label>
-                    <div class="layui-input-inline" style="width: 100px;">
-                        <input type="text" name="price" placeholder="￥" autocomplete="off" class="layui-input">
+    <!--<div class="layui-fluid">-->
+        <div class="layui-card layui-fluid">
+            <form action="" class="layui-form">
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">标题1</label>
+                    <div class="layui-input-block" style="width: 400px">
+                        <input type="text" name="homeName" required lay-verify="required" autocomplete="off" placeholder="请输入标题1" class="layui-input ">
                     </div>
                 </div>
-            </div>
-        </form>
-    </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">标题2</label>
+                    <div class="layui-input-block" style="width: 400px">
+                        <input type="text" name="homeNametwo" required lay-verify="required" autocomplete="off" placeholder="请输入标题2" class="layui-input ">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="" class="layui-form-label">简介</label>
+                    <div class="layui-input-block" style="width: 400px;">
+                        <input type="text" name="homeBright" required lay-verify="required" autocomplete="off" placeholder="请输入手机简介" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">是否收藏</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" checked="" name="close" lay-skin="switch" lay-filter="switchTest" lay-text="是|否">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">价格</label>
+                        <div class="layui-input-inline" style="width: 100px;">
+                            <input type="text" name="homePrice" required lay-verify="number" placeholder="￥" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-upload layui-form-item" style="margin-left: 44px">
+                    <label for="">展示图片</label>
+                    <button type="button" class="layui-btn" id="homeImg">展示图片</button>
+                    <div class="layui-upload-list">
+                        <img class="layui-upload-img" id="img1">
+                        <p id="demoText"></p>
+                    </div>
+                </div>
+                <div class="layui-upload layui-form-item" style="margin-left: 40px">
+                    <label for="">详情轮播</label>
+                    <button type="button" class="layui-btn" id="homeSwipe">上传详情轮播图</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="show-yjk"></div>
+                    </blockquote>
+                </div>
+                <!--<div class="layui-upload layui-form-item">-->
+                    <!--<button type="button" class="layui-btn layui-btn-normal" id="homeSwipe">详情轮播图</button>-->
+                    <!--<div class="layui-upload-list">-->
+                        <!--<table class="layui-table">-->
+                            <!--<thead>-->
+                            <!--<tr><th>文件名</th>-->
+                                <!--<th>大小</th>-->
+                                <!--<th>状态</th>-->
+                                <!--<th>操作</th>-->
+                            <!--</tr></thead>-->
+                            <!--<tbody id="homeSwipeList"></tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                    <!--<button type="button" class="layui-btn" id="doHomeSwipe">开始上传</button>-->
+                <!--</div>-->
+                <div class="layui-upload layui-form-item" style="margin-left: 40px">
+                    <label for="">详情图片</label>
+                    <button type="button" class="layui-btn" id="detailImg">上传详情图片</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="show-yjk-detail"></div>
+                    </blockquote>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">详细介绍</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入内容"  required  class="layui-textarea" name="homeTitle"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-verify="layui-btn" lay-filter="yjk-goods">立即提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <!--</div>-->
+    <script src="../../layuiadmin/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: '../../layuiadmin/' //静态资源所在路径
+        }).extend({
+            index: 'lib/index' //主入口模块
+        }).use(['index', 'publishGoods']);
+    </script>
 </body>
 </html>
