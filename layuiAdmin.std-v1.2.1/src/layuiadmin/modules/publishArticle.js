@@ -8,21 +8,21 @@ layui.use(['form','upload'], function () {
     }
 //    监听复选框
     form.on('switch(switchTest)', function(data){
-        dataParams.isExit = this.checked
+        dataParams.sc = this.checked
     });
 //    监听图片上传
     upload.render({
-        elem: '#homeImg'
-        ,url: 'http://localhost:4000/publish/uploadHomeImg'
+        elem: '#newsImg'
+        ,url: 'http://localhost:4000/publishArticle/uploadNewsImg'
         ,before: function(obj){
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
-                $('#img1').attr('src', result); //图片链接（base64）
+                $('#show-newsImg').attr('src', result); //图片链接（base64）
             });
         }
         ,done: function(res){
             if(res.code == 200){
-                dataParams.homeImg = res.data
+                dataParams.newsImg = res.data
                 return layer.msg('图片上传成功');
             }
         }
@@ -36,46 +36,20 @@ layui.use(['form','upload'], function () {
         }
     });
     upload.render({
-        elem: '#homeSwipe'
-        ,url: 'http://localhost:4000/publish/uploadDetailImg'
-        ,multiple: true
-        ,before: function(obj){
-            //预读本地文件示例，不支持ie8
-            obj.preview(function(index, file, result){
-                if ($('.show-yjk').length < 5) {
-                    $('#show-yjk').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img show-yjk">')
-                }
-            });
-            this.data.swiperLength = {
-                "swiperLength": $('.show-yjk').length+1
-            }
-            this.data.swiperLength = JSON.stringify(this.data.swiperLength)
-        }
-        ,done: function(res){
-            //上传完毕
-            if(res.code == 200 && res.success){
-                dataParams.homeSwipe = res.data
-                return layer.msg(res.message, {icon: 6});
-            }else {
-                return layer.msg(res.message, {icon: 0});
-            }
-        }
-    });
-    upload.render({
-        elem: '#detailImg'
-        ,url: 'http://localhost:4000/publish/uploadDetailIntroduction'
+        elem: '#newsImgDetail'
+        ,url: 'http://localhost:4000/publishArticle/uploadNewsDetailImg'
         ,multiple: true
         ,before: function(obj){
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
                 if ($('.show-yjk-detail').length < 10) {
-                    $('#show-yjk-detail').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img show-yjk-detail" >')
+                    $('#show-newsImgDetail').append('<img src="'+ result +'" alt="'+ file.name +'" class="layui-upload-img show-yjk-detail" >')
                 }
             });
-            this.data.detailLength = {
+            this.data.newsDetailLength = {
                 "detailLength": $('.show-yjk-detail').length+1
             }
-            this.data.detailLength = JSON.stringify(this.data.detailLength)
+            this.data.newsDetailLength = JSON.stringify(this.data.detailLength)
         }
         ,done: function(res,index){
             //上传完毕
