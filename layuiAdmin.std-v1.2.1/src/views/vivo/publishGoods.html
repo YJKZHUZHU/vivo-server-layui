@@ -39,6 +39,22 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
+                    <label class="layui-form-label">商品类型</label>
+                    <div class="layui-input-inline">
+                        <select name="classify" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0" selected="">全部</option>
+                            <option value="1" >Xplay系列</option>
+                            <option value="2">X系列</option>
+                            <option value="3">Y系列</option>
+                            <option value="4">充电器</option>
+                            <option value="5">保护膜</option>
+                            <option value="6">耳机音响</option>
+                            <option value='7'>智能外设</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
                     <label class="layui-form-label">是否收藏</label>
                     <div class="layui-input-block">
                         <input type="checkbox" checked="" name="close" lay-skin="switch" lay-filter="switchTest" lay-text="是|否">
@@ -68,21 +84,6 @@
                         <div class="layui-upload-list" id="show-yjk"></div>
                     </blockquote>
                 </div>
-                <!--<div class="layui-upload layui-form-item">-->
-                    <!--<button type="button" class="layui-btn layui-btn-normal" id="homeSwipe">详情轮播图</button>-->
-                    <!--<div class="layui-upload-list">-->
-                        <!--<table class="layui-table">-->
-                            <!--<thead>-->
-                            <!--<tr><th>文件名</th>-->
-                                <!--<th>大小</th>-->
-                                <!--<th>状态</th>-->
-                                <!--<th>操作</th>-->
-                            <!--</tr></thead>-->
-                            <!--<tbody id="homeSwipeList"></tbody>-->
-                        <!--</table>-->
-                    <!--</div>-->
-                    <!--<button type="button" class="layui-btn" id="doHomeSwipe">开始上传</button>-->
-                <!--</div>-->
                 <div class="layui-upload layui-form-item" style="margin-left: 40px">
                     <label for="">详情图片</label>
                     <button type="button" class="layui-btn" id="detailImg">上传详情图片</button>
