@@ -92,6 +92,8 @@ layui.use(['form','upload'], function () {
         //是否收藏默认不操作，true
         if(params.close == 'on'){
             params.isExit = true
+        }else {
+            params.isExit = dataParams.isExit
         }
         $.ajax({
             url: 'http://localhost:4000/publish/publishGoods',

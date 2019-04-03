@@ -3,12 +3,11 @@ layui.use(['form','upload'], function () {
         $ = layui.$,
         upload = layui.upload,
         layer = layui.layer
-    var dataParams = {
-
-    }
+    var dataParams = {}
 //    监听复选框
     form.on('switch(switchTest)', function(data){
         dataParams.sc = this.checked
+        console.log(dataParams.sc)
     });
 //    监听图片上传
     upload.render({
@@ -22,7 +21,7 @@ layui.use(['form','upload'], function () {
         }
         ,done: function(res){
             if(res.code == 200){
-                dataParams.newsImg = res.data
+                // dataParams.newsImg = res.data
                 return layer.msg('图片上传成功');
             }
         }
@@ -47,14 +46,14 @@ layui.use(['form','upload'], function () {
                 }
             });
             this.data.newsDetailLength = {
-                "detailLength": $('.show-yjk-detail').length+1
+                "newsDetailLength": $('.show-yjk-detail').length+1
             }
-            this.data.newsDetailLength = JSON.stringify(this.data.detailLength)
+            this.data.newsDetailLength = JSON.stringify(this.data.newsDetailLength)
         }
         ,done: function(res,index){
             //上传完毕
             if(res.code == 200 && res.success){
-                dataParams.Images = res.data
+                // dataParams.Images = res.data
                 layer.msg(res.message, {icon: 6});
             }else {
                 layer.msg(res.message, {icon: 0});
@@ -63,12 +62,17 @@ layui.use(['form','upload'], function () {
     });
     //接口数据
     var getDate = function (params) {
+        var data = new Date()
+        params.newsTime = data.pattern('yyy-MM-dd hh:mm:ss')
         //是否收藏默认不操作，true
         if(params.close == 'on'){
-            params.isExit = true
+            params.sc = true
+        }else {
+            params.sc = dataParams.sc
         }
+        console.log(JSON.stringify(params))
         $.ajax({
-            url: 'http://localhost:4000/publish/publishGoods',
+            url: 'http://localhost:4000/publishArticle/publishAritcle',
             data: params,
             type: 'post',
             success: function (res) {
@@ -87,9 +91,9 @@ layui.use(['form','upload'], function () {
         })
     }
     //    监听表单
-    form.on('submit(yjk-goods)', function (data) {
-        console.log(data)
+    form.on('submit(yjk-article)', function (data) {
+        console.log(JSON.stringify(data.field))
         getDate(data.field)
     })
-    form.render(null,'yjk-goods')
+    form.render(null,'yjk-article')
 })
