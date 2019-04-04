@@ -16,7 +16,7 @@ layui.use(['laypage', 'layer'], function(){
                 html += `<div class="layui-col-md2 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
-                    <img src="${res.goodDetail[i].homeImg}">
+                    <img src="${res.goodDetail[i].homeImg}" style="width: 100%">
                 </a>
                 <a href="javascript:;">
                     <div class="cmdlist-text">

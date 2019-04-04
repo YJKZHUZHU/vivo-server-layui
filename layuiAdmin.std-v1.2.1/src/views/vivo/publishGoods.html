@@ -21,15 +21,15 @@
         <div class="layui-card layui-fluid">
             <form action="" class="layui-form">
                 <div class="layui-form-item">
-                    <label for="" class="layui-form-label">标题1</label>
+                    <label for="" class="layui-form-label">标题</label>
                     <div class="layui-input-block" style="width: 400px">
-                        <input type="text" name="homeName" required lay-verify="required" autocomplete="off" placeholder="请输入标题1" class="layui-input ">
+                        <input type="text" name="homeName" required lay-verify="required" autocomplete="off" placeholder="请输入标题" class="layui-input ">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label for="" class="layui-form-label">标题2</label>
+                    <label for="" class="layui-form-label">子标题</label>
                     <div class="layui-input-block" style="width: 400px">
-                        <input type="text" name="homeNametwo" required lay-verify="required" autocomplete="off" placeholder="请输入标题2" class="layui-input ">
+                        <input type="text" name="homeNametwo" required lay-verify="required" autocomplete="off" placeholder="请输入子标题" class="layui-input ">
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -70,24 +70,24 @@
                 </div>
                 <div class="layui-upload layui-form-item" style="margin-left: 44px">
                     <label for="">展示图片</label>
-                    <button type="button" class="layui-btn" id="homeImg">展示图片</button>
-                    <div class="layui-upload-list">
+                    <button type="button" class="layui-btn" id="homeImg" style="margin-left: 10px">上传图片</button>
+                    <div class="layui-upload-list" style="margin-left: 70px">
                         <img class="layui-upload-img" id="img1">
                         <p id="demoText"></p>
                     </div>
                 </div>
                 <div class="layui-upload layui-form-item" style="margin-left: 40px">
                     <label for="">详情轮播</label>
-                    <button type="button" class="layui-btn" id="homeSwipe">上传详情轮播图</button>
-                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                    <button type="button" class="layui-btn" id="homeSwipe" style="margin-left: 10px">上传图片</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;margin-left: 70px">
                         预览图：
                         <div class="layui-upload-list" id="show-yjk"></div>
                     </blockquote>
                 </div>
                 <div class="layui-upload layui-form-item" style="margin-left: 40px">
                     <label for="">详情图片</label>
-                    <button type="button" class="layui-btn" id="detailImg">上传详情图片</button>
-                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                    <button type="button" class="layui-btn" id="detailImg" style="margin-left: 10px">上传图片</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;margin-left: 70px">
                         预览图：
                         <div class="layui-upload-list" id="show-yjk-detail"></div>
                     </blockquote>
@@ -95,10 +95,10 @@
                 <div class="layui-form-item layui-form-text">
                     <label class="layui-form-label">详细介绍</label>
                     <div class="layui-input-block">
-                        <textarea placeholder="请输入内容"  required  class="layui-textarea" name="homeTitle"></textarea>
+                        <textarea placeholder="请输入内容"  required lay-verify="required" class="layui-textarea" name="homeTitle"></textarea>
                     </div>
                 </div>
-                <div class="layui-form-item">
+                <div class="layui-form-item" style="text-align: center">
                     <div class="layui-input-block">
                         <button class="layui-btn" lay-submit="" lay-verify="layui-btn" lay-filter="yjk-goods">立即提交</button>
                     </div>

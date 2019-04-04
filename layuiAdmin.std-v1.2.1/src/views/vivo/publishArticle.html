@@ -23,19 +23,13 @@
         <div class="layui-form-item">
             <label for="" class="layui-form-label">新闻标题</label>
             <div class="layui-input-block" style="width: 400px">
-                <input type="text" name="newsTitle" required lay-verify="required" autocomplete="off" placeholder="请输入标题1" class="layui-input ">
+                <input type="text" name="newsTitle" required lay-verify="required" autocomplete="off" placeholder="请输入新闻标题" class="layui-input ">
             </div>
         </div>
-        <!--<div class="layui-form-item">-->
-            <!--<label for="" class="layui-form-label">标题2</label>-->
-            <!--<div class="layui-input-block" style="width: 400px">-->
-                <!--<input type="text" name="homeNametwo" required lay-verify="required" autocomplete="off" placeholder="请输入标题2" class="layui-input ">-->
-            <!--</div>-->
-        <!--</div>-->
         <div class="layui-form-item">
             <label for="" class="layui-form-label">新闻简介</label>
             <div class="layui-input-block" style="width: 400px;">
-                <input type="text" name="newsCon" required lay-verify="required" autocomplete="off" placeholder="请输入手机简介" class="layui-input">
+                <input type="text" name="newsCon" required lay-verify="required" autocomplete="off" placeholder="请输入新闻简介" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
@@ -47,26 +41,26 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">动态详情</label>
             <div class="layui-input-block">
-                <textarea placeholder="请输入内容"  required  class="layui-textarea" name="newsDetail"></textarea>
+                <textarea placeholder="分段请以'/'分隔开"  required lay-verify="required" class="layui-textarea" name="newsDetail"></textarea>
             </div>
         </div>
         <div class="layui-upload layui-form-item" style="margin-left: 44px">
             <label for="">动态封面</label>
-            <button type="button" class="layui-btn" id="newsImg">上传图片</button>
-            <div class="layui-upload-list">
+            <button type="button" class="layui-btn" id="newsImg" style="margin-left: 10px">上传图片</button>
+            <div class="layui-upload-list" style="margin-left: 70px">
                 <img class="layui-upload-img" id="show-newsImg">
                 <p id="demoText"></p>
             </div>
         </div>
         <div class="layui-upload layui-form-item" style="margin-left: 40px">
             <label for="">详情插图</label>
-            <button type="button" class="layui-btn" id="newsImgDetail">上传图片</button>
-            <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+            <button type="button" class="layui-btn" id="newsImgDetail" style="margin-left: 10px">上传图片</button>
+            <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;margin-left: 70px">
                 预览图：
                 <div class="layui-upload-list" id="show-newsImgDetail"></div>
             </blockquote>
         </div>
-        <div class="layui-form-item">
+        <div class="layui-form-item" style="text-align: center">
             <div class="layui-input-block">
                 <button class="layui-btn" lay-submit="" lay-verify="layui-btn" lay-filter="yjk-article">立即提交</button>
             </div>

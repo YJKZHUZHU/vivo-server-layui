@@ -63,7 +63,7 @@ layui.use(['form','upload'], function () {
     //接口数据
     var getDate = function (params) {
         var data = new Date()
-        params.newsTime = data.pattern('yyy-MM-dd hh:mm:ss')
+        params.newsTime = data.pattern('yyyy-MM-dd hh:mm:ss')
         //是否收藏默认不操作，true
         if(params.close == 'on'){
             params.sc = true
