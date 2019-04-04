@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca3be331-e6e6-4096-b6f1-00d74f5a9370" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/layuiadmin/modules/publishArticleList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layuiadmin/modules/publishGoodsList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/vivo/publishArticleList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/vivo/publishGoodsList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layuiadmin/modules/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/layuiadmin/modules/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layuiadmin/modules/publishArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/layuiadmin/modules/publishArticle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layuiadmin/modules/publishGoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/layuiadmin/modules/publishGoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/vivo/publishArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/vivo/publishArticle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/vivo/publishGoods.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/vivo/publishGoods.html" afterDir="false" />
-    </list>
+    <list default="true" id="ca3be331-e6e6-4096-b6f1-00d74f5a9370" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -298,7 +286,7 @@
     <option name="totallyTimeSpent" value="40602000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
