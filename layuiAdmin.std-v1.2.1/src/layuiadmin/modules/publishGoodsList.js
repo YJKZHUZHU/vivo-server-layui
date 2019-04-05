@@ -13,7 +13,7 @@ layui.use(['laypage', 'layer'], function(){
             });
             var html = ''
             for(var i in res.goodDetail) {
-                html += `<div class="layui-col-md2 layui-col-sm4">
+                html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
                     <img src="${res.goodDetail[i].homeImg}" style="width: 100%">

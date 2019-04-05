@@ -3,7 +3,27 @@ layui.use(['form','upload'], function () {
         $ = layui.$,
         upload = layui.upload,
         layer = layui.layer
-    var dataParams = {}
+    var dataParams = {},
+        newsLength = null
+//监听文本域
+    var listenTextarea = function() {
+        $('#newsDetailLength').on('change', function () {
+            if ($('#newsDetailLength').val().lastIndexOf('/') == -1 || $('#newsDetailLength').val().indexOf('/') == -1){
+                layer.msg('分段，结尾请以"/"')
+            }else{
+                if($('#newsDetailLength').val().lastIndexOf('/') == -1){
+                    newsLength = $('#newsDetailLength').val().split('/').length
+                }else {
+                    newsLength = $('#newsDetailLength').val().split('/').filter(function (n) {
+                        return n
+                    }).length
+                }
+                console.log(newsLength)
+            }
+
+        })
+    }
+    listenTextarea()
 //    监听复选框
     form.on('switch(switchTest)', function(data){
         dataParams.sc = this.checked
@@ -38,7 +58,9 @@ layui.use(['form','upload'], function () {
         elem: '#newsImgDetail'
         ,url: 'http://localhost:4000/publishArticle/uploadNewsDetailImg'
         ,multiple: true
+        ,number: newsLength
         ,before: function(obj){
+            console.log(newsLength)
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
                 if ($('.show-yjk-detail').length < 10) {
@@ -60,6 +82,7 @@ layui.use(['form','upload'], function () {
             }
         }
     });
+
     //接口数据
     var getDate = function (params) {
         var data = new Date()
@@ -92,6 +115,8 @@ layui.use(['form','upload'], function () {
     }
     //    监听表单
     form.on('submit(yjk-article)', function (data) {
+
+
         console.log(JSON.stringify(data.field))
         getDate(data.field)
     })

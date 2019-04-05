@@ -13,7 +13,7 @@ layui.use(['laypage', 'layer'], function(){
             });
             var html = ''
             for(var i in res.news) {
-                html += `<div class="layui-col-md2 layui-col-sm4">
+                html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
                     <img src="${res.news[i].newsImg}" style="height: 120px;">

@@ -39,6 +39,7 @@ layui.use(['form','upload'], function () {
         elem: '#homeSwipe'
         ,url: 'http://localhost:4000/publish/uploadDetailImg'
         ,multiple: true
+        ,number: 5
         ,before: function(obj){
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
@@ -65,6 +66,7 @@ layui.use(['form','upload'], function () {
         elem: '#detailImg'
         ,url: 'http://localhost:4000/publish/uploadDetailIntroduction'
         ,multiple: true
+        ,number: 10
         ,before: function(obj){
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
