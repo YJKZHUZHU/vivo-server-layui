@@ -1,19 +1,20 @@
-layui.use(['laypage', 'layer'], function(){
-    var laypage = layui.laypage
-        ,$ = layui.$
-        ,layer = layui.layer
-        ,totalCount = null;
-    var getArticleList = function() {
-        $.get('http://localhost:4000/news', function (res) {
-            totalCount = res.totalCount
-            //总页数低于页码总数
-            laypage.render({
-                elem: 'demo0'
-                ,count: res.totalCount //数据总数
-            });
-            var html = ''
-            for(var i in res.news) {
-                html += `<div class="layui-col-md3 layui-col-sm4">
+layui.define(function (exports) {
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+            ,$ = layui.$
+            ,layer = layui.layer
+            ,totalCount = null;
+        var getArticleList = function() {
+            $.get('http://localhost:4000/news', function (res) {
+                totalCount = res.totalCount
+                //总页数低于页码总数
+                laypage.render({
+                    elem: 'demo0'
+                    ,count: res.totalCount //数据总数
+                });
+                var html = ''
+                for(var i in res.news) {
+                    html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
                     <img src="${res.news[i].newsImg}" style="height: 120px;">
@@ -33,11 +34,13 @@ layui.use(['laypage', 'layer'], function(){
                 </a>
             </div>
         </div>`
-            }
-            $('#appendArticleList').append(html)
-        })
-    }
-    getArticleList()
+                }
+                $('#appendArticleList').append(html)
+            })
+        }
+        getArticleList()
 
 
-});
+    });
+    exports('publishArticleList',{})
+})

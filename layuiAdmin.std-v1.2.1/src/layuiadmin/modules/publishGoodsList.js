@@ -1,19 +1,20 @@
-layui.use(['laypage', 'layer'], function(){
-    var laypage = layui.laypage
-        ,$ = layui.$
-        ,layer = layui.layer
-        ,totalCount = null;
-    var getGoodsList = function() {
-        $.get('http://localhost:4000/goodDetail', function (res) {
-            totalCount = res.totalCount
-            //总页数低于页码总数
-            laypage.render({
-                elem: 'demo0'
-                ,count: res.totalCount //数据总数
-            });
-            var html = ''
-            for(var i in res.goodDetail) {
-                html += `<div class="layui-col-md3 layui-col-sm4">
+layui.define(function (exports) {
+    layui.use(['laypage', 'layer'], function(){
+        var laypage = layui.laypage
+            ,$ = layui.$
+            ,layer = layui.layer
+            ,totalCount = null;
+        var getGoodsList = function() {
+            $.get('http://localhost:4000/goodDetail', function (res) {
+                totalCount = res.totalCount
+                //总页数低于页码总数
+                laypage.render({
+                    elem: 'demo0'
+                    ,count: res.totalCount //数据总数
+                });
+                var html = ''
+                for(var i in res.goodDetail) {
+                    html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
                     <img src="${res.goodDetail[i].homeImg}" style="width: 100%">
@@ -36,11 +37,13 @@ layui.use(['laypage', 'layer'], function(){
                 </a>
             </div>
         </div>`
-            }
-            $('#appendGoodsList').append(html)
-        })
-    }
-    getGoodsList()
+                }
+                $('#appendGoodsList').append(html)
+            })
+        }
+        getGoodsList()
 
 
-});
+    });
+    exports('publishGoodsList', {})
+})
