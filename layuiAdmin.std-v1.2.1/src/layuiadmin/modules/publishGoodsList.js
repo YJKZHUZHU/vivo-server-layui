@@ -35,6 +35,7 @@ layui.define(function (exports) {
                         </div>
                     </div>
                 </a>
+                 <button class="layui-btn layui-btn-danger deleteGoods" data-goodId="${res.goodDetail[i].id}" style="margin-left: 40%">删除</button>
             </div>
         </div>`
                 }
@@ -42,6 +43,36 @@ layui.define(function (exports) {
             })
         }
         getGoodsList()
+        $(document).on('click','.deleteGoods', function () {
+            var params = {
+                id: $(this).attr('data-goodId')
+            }
+            layer.confirm('真的删除该商品吗？', function(){
+                layer.msg('正在删除', {icon: 16}, function(){
+                    $.ajax({
+                        url: 'http://localhost:4000/publish/deleteGoods',
+                        data: params,
+                        type: 'post',
+                        success: function (res) {
+                            if (res.success && res.code == 200){
+                                layer.msg(res.message, {icon: 1})
+                                getGoodsList()
+                                //发布成功后，清空表单
+                                // return false
+                            }else {
+                                layer.msg(res.message, {icon: 0});
+                            }
+
+                        },
+                        error: function (err) {
+                            console.log(err)
+                        }
+                    })
+
+                });
+            });
+
+        })
 
 
     });
