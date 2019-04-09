@@ -29,7 +29,7 @@ layui.define(function (exports) {
                             console.log(err)
                         }
                     })
-                    $('#appendGoodsList').remove()
+                    // $('#appendGoodsList').remove()
                     getGoodsList()
                 });
             });
@@ -38,6 +38,7 @@ layui.define(function (exports) {
         var getGoodsList = function() {
 
             $.get('http://localhost:4000/goodDetail', function (res) {
+                var html = ''
                 totalCount = res.totalCount
                 //总页数低于页码总数
                 laypage.render({
@@ -45,7 +46,7 @@ layui.define(function (exports) {
                     ,count: res.totalCount //数据总数
                 });
                 for(var i in res.goodDetail) {
-                    var html = ''
+
                     html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
