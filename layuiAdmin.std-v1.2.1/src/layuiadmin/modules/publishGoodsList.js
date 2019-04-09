@@ -4,7 +4,39 @@ layui.define(function (exports) {
             ,$ = layui.$
             ,layer = layui.layer
             ,totalCount = null;
+        $(document).on('click','.deleteGoods', function () {
+            var params = {
+                id: $(this).attr('data-goodId')
+            }
+            layer.confirm('真的删除该商品吗？', function(){
+                layer.msg('正在删除', {icon: 16}, function(){
+                    $.ajax({
+                        url: 'http://localhost:4000/publish/deleteGoods',
+                        data: params,
+                        type: 'post',
+                        success: function (res) {
+                            if (res.success && res.code == 200){
+                                layer.msg(res.message, {icon: 1})
+
+                                //发布成功后，清空表单
+                                // return false
+                            }else {
+                                layer.msg(res.message, {icon: 0});
+                            }
+
+                        },
+                        error: function (err) {
+                            console.log(err)
+                        }
+                    })
+                    $('#appendGoodsList').remove()
+                    getGoodsList()
+                });
+            });
+
+        })
         var getGoodsList = function() {
+
             $.get('http://localhost:4000/goodDetail', function (res) {
                 totalCount = res.totalCount
                 //总页数低于页码总数
@@ -12,8 +44,8 @@ layui.define(function (exports) {
                     elem: 'demo0'
                     ,count: res.totalCount //数据总数
                 });
-                var html = ''
                 for(var i in res.goodDetail) {
+                    var html = ''
                     html += `<div class="layui-col-md3 layui-col-sm4">
             <div class="cmdlist-container">
                 <a href="javascript:;">
@@ -43,38 +75,6 @@ layui.define(function (exports) {
             })
         }
         getGoodsList()
-        $(document).on('click','.deleteGoods', function () {
-            var params = {
-                id: $(this).attr('data-goodId')
-            }
-            layer.confirm('真的删除该商品吗？', function(){
-                layer.msg('正在删除', {icon: 16}, function(){
-                    $.ajax({
-                        url: 'http://localhost:4000/publish/deleteGoods',
-                        data: params,
-                        type: 'post',
-                        success: function (res) {
-                            if (res.success && res.code == 200){
-                                layer.msg(res.message, {icon: 1})
-                                getGoodsList()
-                                //发布成功后，清空表单
-                                // return false
-                            }else {
-                                layer.msg(res.message, {icon: 0});
-                            }
-
-                        },
-                        error: function (err) {
-                            console.log(err)
-                        }
-                    })
-
-                });
-            });
-
-        })
-
-
     });
     exports('publishGoodsList', {})
 })
