@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8bbe435-ff0d-4108-960d-1c98c642c6c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,20 +20,50 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/index.html">
+        <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2550" />
+            <state relative-caret-position="268">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1900#2528#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="121" column="20" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="20" />
+              <folding>
+                <element signature="e#306#362#0" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#1344#2413#0" />
+                <element signature="e#2438#3536#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js">
+        <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="443">
+              <caret line="121" column="6" lean-forward="true" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
               <folding>
-                <element signature="e#1573#1676#0" />
-                <element signature="n#div#0;n#!!top" />
+                <element signature="e#311#1099#0" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,13 +71,22 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>conso</find>
+      <find>cons</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js" />
         <option value="$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js" />
+        <option value="$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js" />
+        <option value="$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js" />
       </list>
     </option>
   </component>
@@ -59,6 +102,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,7 +138,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,17 +170,19 @@
       <option name="presentableId" value="Default" />
       <updated>1554734579208</updated>
       <workItem from="1554734581901" duration="318000" />
-      <workItem from="1554819784271" duration="1694000" />
+      <workItem from="1554819784271" duration="2318000" />
+      <workItem from="1555122367002" duration="2400000" />
+      <workItem from="1555148216605" duration="2566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2012000" />
+    <option name="totallyTimeSpent" value="7602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24702774" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24702774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -150,7 +195,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13739377" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13314448" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -162,17 +207,46 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/views/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2550" />
+        <state relative-caret-position="268">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1900#2528#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="121" column="20" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="20" />
+          <folding>
+            <element signature="e#306#362#0" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#1344#2413#0" />
+            <element signature="e#2438#3536#0" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="20">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="121" column="6" lean-forward="true" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
           <folding>
-            <element signature="e#1573#1676#0" />
-            <element signature="n#div#0;n#!!top" />
+            <element signature="e#311#1099#0" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

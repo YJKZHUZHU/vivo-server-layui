@@ -22,15 +22,12 @@ layui.define(function (exports) {
                     layer.msg('分段成功，分段数量为'+newsLength,{icon:6})
                 }
             })
-            console.log(newsLength)
+            // console.log(newsLength)
         }
         listenTextarea()
-        // console.log('b='+b)
-
 //    监听复选框
         form.on('switch(switchTest)', function(data){
             dataParams.sc = this.checked
-            console.log(dataParams.sc)
         });
 //    监听图片上传
         upload.render({
@@ -97,7 +94,7 @@ layui.define(function (exports) {
             }else {
                 params.sc = dataParams.sc
             }
-            console.log(JSON.stringify(params))
+            // console.log(JSON.stringify(params))
             $.ajax({
                 url: 'http://localhost:4000/publishArticle/publishAritcle',
                 data: params,
@@ -119,9 +116,6 @@ layui.define(function (exports) {
         }
         //    监听表单
         form.on('submit(yjk-article)', function (data) {
-
-
-            console.log(JSON.stringify(data.field))
             getDate(data.field)
         })
         form.render(null,'yjk-article')

@@ -119,7 +119,7 @@ layui.define(function (exports) {
         }
         //    监听表单
         form.on('submit(yjk-goods)', function (data) {
-            console.log(data)
+            // console.log(data)
             getDate(data.field)
         })
         form.render(null,'yjk-goods')

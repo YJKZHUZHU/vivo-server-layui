@@ -3,10 +3,8 @@ layui.define(['laypage', 'layer'], function (exports) {
         ,$ = layui.$
         ,layer = layui.layer
         ,totalCount = null;
-    var btnRefresh = window.parent.document.querySelectorAll('.js-btn-refresh')
-
+    // var btnRefresh = window.parent.document.querySelectorAll('.js-btn-refresh')
     function getGoodsList() {
-        // $('#appendGoodsList').remove()
         $.get('http://localhost:4000/goodDetail', function (res) {
             var html = ''
             totalCount = res.totalCount
@@ -17,29 +15,29 @@ layui.define(['laypage', 'layer'], function (exports) {
             });
             for(var i in res.goodDetail) {
                 html += `<div class="layui-col-md3 layui-col-sm4">
-            <div class="cmdlist-container">
-                <a href="javascript:;">
-                    <img src="${res.goodDetail[i].homeImg}" style="width: 100%">
-                </a>
-                <a href="javascript:;">
-                    <div class="cmdlist-text">
-                        <p class="info">${res.goodDetail[i].homeTitle}</p>
-                        <div class="price">
-                            <b>￥${res.goodDetail[i].homePrice}</b>
-                            <p>
-                                ¥
-                                <del>${res.goodDetail[i].homePrice}</del>
-                            </p>
-                            <span class="flow">
-                      <i class="layui-icon layui-icon-rate"></i>
-                      ${res.goodDetail[i].id}
-                    </span>
-                        </div>
-                    </div>
-                </a>
-                 <button class="layui-btn layui-btn-danger deleteGoods" data-goodId="${res.goodDetail[i].id}" style="margin-left: 40%">删除</button>
-            </div>
-        </div>`
+                            <div class="cmdlist-container" style="padding-bottom: 10px;">
+                                <a href="javascript:;">
+                                    <img src="${res.goodDetail[i].homeImg}" style="width: 100%">
+                                </a>
+                                <a href="javascript:;">
+                                    <div class="cmdlist-text">
+                                        <p class="info">${res.goodDetail[i].homeTitle}</p>
+                                        <div class="price">
+                                            <b>￥${res.goodDetail[i].homePrice}</b>
+                                            <p>
+                                                ¥
+                                                <del>${res.goodDetail[i].homePrice}</del>
+                                            </p>
+                                            <span class="flow">
+                                      <i class="layui-icon layui-icon-rate"></i>
+                                      ${res.goodDetail[i].id}
+                                    </span>
+                                        </div>
+                                    </div>
+                                </a>
+                                 <button class="layui-btn layui-btn-danger deleteGoods" data-goodId="${res.goodDetail[i].id}" style="margin-left: 40%">删除</button>
+                            </div>
+                        </div>`
             }
             $('#appendGoodsList').append(html)
         })
