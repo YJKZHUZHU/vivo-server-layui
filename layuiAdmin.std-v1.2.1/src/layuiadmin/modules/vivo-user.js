@@ -26,5 +26,66 @@ layui.define([ 'form', 'table'], function (exports) {
             };
         }
     });
+    //监听行
+    table.on('tool(LAY-user-manage)', function (obj) {
+        var data = obj.data
+        var params = {
+            _id: data._id
+        }
+        console.log(data)
+        if(obj.event === 'del'){
+            layer.confirm('真的删除行么', function(index){
+                $.ajax({
+                    url: 'http://localhost:4000/deleteUser',
+                    data: params,
+                    type: 'post',
+                    success: function (res) {
+                        if (res.success && res.code == 0){
+                            layer.msg(res.message, {icon: 6});
+                            //发布成功后，清空表单
+                            return false
+                        }else {
+                            layer.msg(res.message, {icon: 0});
+                        }
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+                obj.del();
+                layer.close(index);
+            });
+        }
+    })
+    //查询
+    function searchUser(params) {
+        $.ajax({
+            url: 'http://localhost:4000/searchUser',
+            data: params,
+            type: 'post',
+            success: function (res) {
+                if (res.success && res.code == 0){
+                    layer.msg(res.message, {icon: 6});
+                    //发布成功后，清空表单
+                    return false
+                }else {
+                    layer.msg(res.message, {icon: 0});
+                }
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    }
+    //监听搜索
+    form.on('submit(LAY-user-front-search)', function(data){
+        // console.log(data)
+        var data = data.field;
+        searchUser(data)
+        //执行重载
+        table.reload('LAY-user-manage', {
+            where: data
+        });
+    });
     exports('vivo-user', {})
 })

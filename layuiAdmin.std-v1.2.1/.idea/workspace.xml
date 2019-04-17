@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8bbe435-ff0d-4108-960d-1c98c642c6c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishArticleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layuiadmin/modules/publishGoodsList.js" afterDir="false" />
-    </list>
+    <list default="true" id="d8bbe435-ff0d-4108-960d-1c98c642c6c2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -59,7 +53,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
+            <state relative-caret-position="142">
               <caret line="121" column="6" lean-forward="true" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
               <folding>
                 <element signature="e#311#1099#0" />
@@ -172,17 +166,17 @@
       <workItem from="1554734581901" duration="318000" />
       <workItem from="1554819784271" duration="2318000" />
       <workItem from="1555122367002" duration="2400000" />
-      <workItem from="1555148216605" duration="2566000" />
+      <workItem from="1555148216605" duration="2631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7602000" />
+    <option name="totallyTimeSpent" value="7667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24702774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24702774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Gulp" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -195,7 +189,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13314448" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.4716714" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -242,7 +236,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/layuiadmin/modules/publishArticle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
+        <state relative-caret-position="142">
           <caret line="121" column="6" lean-forward="true" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
           <folding>
             <element signature="e#311#1099#0" />
