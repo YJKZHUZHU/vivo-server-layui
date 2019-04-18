@@ -8,6 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../../layuiadmin/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="../../layuiadmin/style/admin.css" media="all">
+    <style>
+        .laytable-cell-1-0-4 {
+            width: 211px;
+            height: 100% !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,9 +22,9 @@
         <div class="layui-form layui-card-header layuiadmin-card-header-auto">
             <div class="layui-form-item">
                 <div class="layui-inline">
-                    <label class="layui-form-label">ID</label>
+                    <label class="layui-form-label">商品ID</label>
                     <div class="layui-input-block">
-                        <input type="text" name="id" placeholder="请输入24位ID" autocomplete="off" class="layui-input" style="width: 250px;" lay-verify="userId">
+                        <input type="text" name="id" placeholder="请输入商品Id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-inline">
@@ -38,7 +44,7 @@
         <div class="layui-card-body">
             <table id="LAY-user-manage" lay-filter="LAY-user-manage"></table>
             <!--<script type="text/html" id="imgTpl">-->
-                <!--<img style="display: inline-block; width: 50%; height: 100%;" src= {{ d.avatar }}>-->
+            <!--<img style="display: inline-block; width: 50%; height: 100%;" src= {{ d.avatar }}>-->
             <!--</script>-->
             <script type="text/html" id="table-useradmin-webuser">
                 <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon layui-icon-delete"></i>删除</a>
@@ -53,7 +59,7 @@
         base: '../../layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use(['index', 'vivo-user']);
+    }).use(['index', 'vivo-order']);
 </script>
 </body>
 </html>

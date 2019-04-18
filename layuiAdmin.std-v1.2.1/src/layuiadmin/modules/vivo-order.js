@@ -4,12 +4,20 @@ layui.define([ 'form', 'table'], function (exports) {
         ,table = layui.table;
     table.render({
         elem: '#LAY-user-manage'
-        ,url:'http://localhost:4000/userList'
+        ,url:'http://localhost:4000/orderList'
         ,title: '用户数据表'
         ,cols: [[
-            {field:'_id', title:'ID', sort: true, align: 'center'}
-            ,{field:'name', title:'用户名', align: 'center'}
-            ,{field:'pattonLoginOrRegisterTime', title:'注册时间', align: 'center'}
+            {field:'id', title:'商品ID', sort: true, align: 'center'}
+            ,{field:'userName', title:'用户名', align: 'center'}
+            ,{field:'name', title:'商品名称', align: 'center'}
+            ,{field:'price', title:'订单价格', align: 'center'}
+            ,{field:'img', title:'订单图片', align: 'center',style: 'height:100px',templet: function (d) {
+                    return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
+                }}
+            ,{field:'listname', title:'支付方式', align: 'center'}
+            ,{field:'ly', title:'留言', align: 'center'}
+            ,{field:'orderTime', title:'提交订单时间', align: 'center'}
+            ,{field:'orderNumber', title:'订单编号', align: 'center'}
             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
         ]]
         ,page: true
@@ -32,11 +40,10 @@ layui.define([ 'form', 'table'], function (exports) {
         var params = {
             _id: data._id
         }
-        console.log(data)
         if(obj.event === 'del'){
-            layer.confirm('真的删除该用户吗', function(index){
+            layer.confirm('真的删除该订单吗', function(index){
                 $.ajax({
-                    url: 'http://localhost:4000/deleteUser',
+                    url: 'http://localhost:4000/deleteOrder',
                     data: params,
                     type: 'post',
                     success: function (res) {
@@ -60,7 +67,7 @@ layui.define([ 'form', 'table'], function (exports) {
     //查询
     function searchUser(params) {
         $.ajax({
-            url: 'http://localhost:4000/searchUser',
+            url: 'http://localhost:4000/searchOrder',
             data: params,
             type: 'post',
             success: function (res) {
@@ -70,9 +77,17 @@ layui.define([ 'form', 'table'], function (exports) {
                         elem: '#LAY-user-manage',
                         data: res.data,
                         cols: [[
-                            {field:'_id', title:'ID', sort: true, align: 'center'}
-                            ,{field:'name', title:'用户名', align: 'center'}
-                            ,{field:'pattonLoginOrRegisterTime', title:'注册时间', align: 'center'}
+                            {field:'id', title:'商品ID', sort: true, align: 'center'}
+                            ,{field:'userName', title:'用户名', align: 'center'}
+                            ,{field:'name', title:'商品名称', align: 'center'}
+                            ,{field:'price', title:'订单价格', align: 'center'}
+                            ,{field:'img', title:'订单图片', align: 'center',style: 'height:100px',templet: function (d) {
+                                    return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
+                                }}
+                            ,{field:'listname', title:'支付方式', align: 'center'}
+                            ,{field:'ly', title:'留言', align: 'center'}
+                            ,{field:'orderTime', title:'提交订单时间', align: 'center'}
+                            ,{field:'orderNumber', title:'订单编号', align: 'center'}
                             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
                         ]],
                         page: true
@@ -83,9 +98,17 @@ layui.define([ 'form', 'table'], function (exports) {
                         elem: '#LAY-user-manage',
                         data: res.data,
                         cols: [[
-                            {field:'_id', title:'ID', sort: true, align: 'center'}
-                            ,{field:'name', title:'用户名', align: 'center'}
-                            ,{field:'pattonLoginOrRegisterTime', title:'注册时间', align: 'center'}
+                            {field:'id', title:'商品ID', sort: true, align: 'center'}
+                            ,{field:'userName', title:'用户名', align: 'center'}
+                            ,{field:'name', title:'商品名称', align: 'center'}
+                            ,{field:'price', title:'订单价格', align: 'center'}
+                            ,{field:'img', title:'订单图片', align: 'center',style: 'height:100px',templet: function (d) {
+                                    return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
+                                }}
+                            ,{field:'listname', title:'支付方式', align: 'center'}
+                            ,{field:'ly', title:'留言', align: 'center'}
+                            ,{field:'orderTime', title:'提交订单时间', align: 'center'}
+                            ,{field:'orderNumber', title:'订单编号', align: 'center'}
                             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
                         ]],
                         page: true
@@ -101,18 +124,8 @@ layui.define([ 'form', 'table'], function (exports) {
     form.on('submit(LAY-user-front-search)', function(data){
         // console.log(data)
         var data = data.field;
+        console.log(data)
         searchUser(data)
     });
-    //id验证
-    form.verify({
-        userId: function (value, item) {
-            console.log(value.length, item)
-            if (value.length == 0){
-                return false
-            }else if (value.length != 24 && value.length != 0 ) {
-                return '输入24位长度ID'
-            }
-        }
-    })
-    exports('vivo-user', {})
+    exports('vivo-order', {})
 })
