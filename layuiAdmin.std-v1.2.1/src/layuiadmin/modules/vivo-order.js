@@ -16,6 +16,7 @@ layui.define([ 'form', 'table'], function (exports) {
                 }}
             ,{field:'listname', title:'支付方式', align: 'center'}
             ,{field:'ly', title:'留言', align: 'center'}
+            ,{field:'address', title:'收获地址', align: 'center'}
             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
             ,{field:'orderNumber', title:'订单编号', align: 'center'}
             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
@@ -86,6 +87,7 @@ layui.define([ 'form', 'table'], function (exports) {
                                 }}
                             ,{field:'listname', title:'支付方式', align: 'center'}
                             ,{field:'ly', title:'留言', align: 'center'}
+                            ,{field:'address', title:'收获地址', align: 'center'}
                             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
                             ,{field:'orderNumber', title:'订单编号', align: 'center'}
                             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
@@ -107,6 +109,7 @@ layui.define([ 'form', 'table'], function (exports) {
                                 }}
                             ,{field:'listname', title:'支付方式', align: 'center'}
                             ,{field:'ly', title:'留言', align: 'center'}
+                            ,{field:'address', title:'收获地址', align: 'center'}
                             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
                             ,{field:'orderNumber', title:'订单编号', align: 'center'}
                             ,{title: '操作', width: 150, align:'center', fixed: 'right', toolbar: '#table-useradmin-webuser'}
