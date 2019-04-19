@@ -15,6 +15,7 @@ layui.define([ 'form', 'table'], function (exports) {
                     return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
                 }}
             ,{field:'listname', title:'支付方式', align: 'center'}
+            ,{field:'orderStatus', title:'支付状态', align: 'center'}
             ,{field:'ly', title:'留言', align: 'center'}
             ,{field:'address', title:'收获地址', align: 'center'}
             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
@@ -26,6 +27,16 @@ layui.define([ 'form', 'table'], function (exports) {
             statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
         }
         ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据
+            console.log(typeof  res.data[1].orderStatus)
+            for(var i in res.data) {
+                if (res.data[i].orderStatus == '1') {
+                    res.data[i].orderStatus = '已付款'
+                }else if (res.data[i].orderStatus == '0') {
+                    res.data[i].orderStatus = '待付款'
+                }else {
+                    res.data[i].orderStatus = '未知来源'
+                }
+            }
             const data = JSON.parse(JSON.stringify(res.data).replace(/phone/g,'name'))
             return {
                 "code": res.code, //解析接口状态
@@ -86,6 +97,7 @@ layui.define([ 'form', 'table'], function (exports) {
                                     return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
                                 }}
                             ,{field:'listname', title:'支付方式', align: 'center'}
+                            ,{field:'orderStatus', title:'支付状态', align: 'center'}
                             ,{field:'ly', title:'留言', align: 'center'}
                             ,{field:'address', title:'收获地址', align: 'center'}
                             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
@@ -108,6 +120,7 @@ layui.define([ 'form', 'table'], function (exports) {
                                     return  '<div style="height: 100%;"><img src="'+d.img+'" alt=""></a></div>';
                                 }}
                             ,{field:'listname', title:'支付方式', align: 'center'}
+                            ,{field:'orderStatus', title:'支付状态', align: 'center'}
                             ,{field:'ly', title:'留言', align: 'center'}
                             ,{field:'address', title:'收获地址', align: 'center'}
                             ,{field:'orderTime', title:'提交订单时间', align: 'center'}
