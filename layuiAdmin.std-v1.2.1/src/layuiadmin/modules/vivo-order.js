@@ -86,6 +86,15 @@ layui.define([ 'form', 'table'], function (exports) {
             success: function (res) {
                 if (res.success && res.code == 0){
                     layer.msg(res.message, {icon: 6});
+                    for(var i in res.data) {
+                        if (res.data[i].orderStatus == '1') {
+                            res.data[i].orderStatus = '已付款'
+                        }else if (res.data[i].orderStatus == '0') {
+                            res.data[i].orderStatus = '待付款'
+                        }else {
+                            res.data[i].orderStatus = '未知来源'
+                        }
+                    }
                     table.render({
                         elem: '#LAY-user-manage',
                         data: res.data,
@@ -109,6 +118,15 @@ layui.define([ 'form', 'table'], function (exports) {
                     })
                 }else {
                     layer.msg(res.message, {icon: 0});
+                    for(var i in res.data) {
+                        if (res.data[i].orderStatus == '1') {
+                            res.data[i].orderStatus = '已付款'
+                        }else if (res.data[i].orderStatus == '0') {
+                            res.data[i].orderStatus = '待付款'
+                        }else {
+                            res.data[i].orderStatus = '未知来源'
+                        }
+                    }
                     table.render({
                         elem: '#LAY-user-manage',
                         data: res.data,
