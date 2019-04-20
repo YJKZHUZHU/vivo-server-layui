@@ -50,7 +50,8 @@ layui.define([ 'form', 'table'], function (exports) {
     table.on('tool(LAY-user-manage)', function (obj) {
         var data = obj.data
         var params = {
-            _id: data._id
+            _id: data._id,
+            orderNumber: data.orderNumber
         }
         if(obj.event === 'del'){
             layer.confirm('真的删除该订单吗', function(index){

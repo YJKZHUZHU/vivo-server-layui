@@ -103,11 +103,15 @@ layui.define(function (exports) {
                     if (res.success && res.code == 200){
                         layer.msg(res.message, {icon: 6});
                         //发布成功后，清空表单
+                        // $("#yjk-form-clear")[0].reset();
+                        // layui.form.render();
                         return false
                     }else {
                         layer.msg(res.message, {icon: 0});
+                        // $("#yjk-form-clear")[0].reset();
+                        // layui.form.render();
+                        // return false
                     }
-
                 },
                 error: function (err) {
                     console.log(err)
@@ -117,6 +121,7 @@ layui.define(function (exports) {
         //    监听表单
         form.on('submit(yjk-article)', function (data) {
             getDate(data.field)
+            // return false
         })
         form.render(null,'yjk-article')
     })
