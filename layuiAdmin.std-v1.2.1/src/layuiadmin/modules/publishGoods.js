@@ -8,9 +8,9 @@ layui.define(function (exports) {
 
         }
 //    监听复选框
-        form.on('switch(switchTest)', function(data){
-            dataParams.isExit = this.checked
-        });
+//         form.on('switch(switchTest)', function(data){
+//             dataParams.isExit = this.checked
+//         });
 //    监听图片上传
         upload.render({
             elem: '#homeImg'
@@ -93,11 +93,14 @@ layui.define(function (exports) {
         //接口数据
         var getDate = function (params) {
             //是否收藏默认不操作，true
-            if(params.close == 'on'){
-                params.isExit = true
-            }else {
-                params.isExit = dataParams.isExit
-            }
+            // if(params.close == 'on'){
+            //     params.isExit = true
+            // }else {
+            //     params.isExit = dataParams.isExit
+            // }
+            var data = new Date()
+            params.isExit = false
+            params.publishGoodTime = data.pattern('yyyy-MM-dd hh:mm:ss')
             $.ajax({
                 url: 'http://localhost:4000/publish/publishGoods',
                 data: params,

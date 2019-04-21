@@ -26,9 +26,9 @@ layui.define(function (exports) {
         }
         listenTextarea()
 //    监听复选框
-        form.on('switch(switchTest)', function(data){
-            dataParams.sc = this.checked
-        });
+//         form.on('switch(switchTest)', function(data){
+//             dataParams.sc = this.checked
+//         });
 //    监听图片上传
         upload.render({
             elem: '#newsImg'
@@ -89,11 +89,12 @@ layui.define(function (exports) {
             var data = new Date()
             params.newsTime = data.pattern('yyyy-MM-dd hh:mm:ss')
             //是否收藏默认不操作，true
-            if(params.close == 'on'){
-                params.sc = true
-            }else {
-                params.sc = dataParams.sc
-            }
+            // if(params.close == 'on'){
+            //     params.sc = true
+            // }else {
+            //     params.sc = dataParams.sc
+            // }
+            params.sc = false
             // console.log(JSON.stringify(params))
             $.ajax({
                 url: 'http://localhost:4000/publishArticle/publishAritcle',

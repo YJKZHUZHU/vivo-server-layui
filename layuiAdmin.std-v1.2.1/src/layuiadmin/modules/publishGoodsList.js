@@ -13,6 +13,7 @@ layui.define([ 'form', 'table'], function (exports) {
             ,{field:'isExit', title:'是否收藏', align: 'center'}
             ,{field:'homeBright', title:'卖点', align: 'center'}
             ,{field:'homeTitle', title:'详细介绍', align: 'center'}
+            ,{field:'publishGoodTime', title:'发布时间', align: 'center'}
             ,{field:'homeImg', title:'商品主图', align: 'center',style: 'height:100px',templet: function (d) {
                     return  '<div style="height: 100%;"><img src="'+d.homeImg+'" alt=""></a></div>';
                 }}
@@ -85,6 +86,7 @@ layui.define([ 'form', 'table'], function (exports) {
                             ,{field:'isExit', title:'是否收藏', align: 'center'}
                             ,{field:'homeBright', title:'卖点', align: 'center'}
                             ,{field:'homeTitle', title:'详细介绍', align: 'center'}
+                            ,{field:'publishGoodTime', title:'发布时间', align: 'center'}
                             ,{field:'homeImg', title:'商品主图', align: 'center',style: 'height:100px',templet: function (d) {
                                     return  '<div style="height: 100%;"><img src="'+d.homeImg+'" alt=""></a></div>';
                                 }}
@@ -104,6 +106,7 @@ layui.define([ 'form', 'table'], function (exports) {
                             ,{field:'isExit', title:'是否收藏', align: 'center'}
                             ,{field:'homeBright', title:'卖点', align: 'center'}
                             ,{field:'homeTitle', title:'详细介绍', align: 'center'}
+                            ,{field:'publishGoodTime', title:'发布时间', align: 'center'}
                             ,{field:'homeImg', title:'商品主图', align: 'center',style: 'height:100px',templet: function (d) {
                                     return  '<div style="height: 100%;"><img src="'+d.homeImg+'" alt=""></a></div>';
                                 }}
