@@ -33,7 +33,9 @@ layui.define([ 'form', 'table'], function (exports) {
                     res.data[i].orderStatus = '已付款'
                 }else if (res.data[i].orderStatus == '0') {
                     res.data[i].orderStatus = '待付款'
-                }else {
+                }else if (res.data[i].orderStatus == '2'){
+                    res.data[i].orderStatus = '正在结算'
+                } else {
                     res.data[i].orderStatus = '未知来源'
                 }
             }
@@ -91,7 +93,9 @@ layui.define([ 'form', 'table'], function (exports) {
                             res.data[i].orderStatus = '已付款'
                         }else if (res.data[i].orderStatus == '0') {
                             res.data[i].orderStatus = '待付款'
-                        }else {
+                        }else if (res.data[i].orderStatus == '2'){
+                            res.data[i].orderStatus = '正在结算'
+                        } else {
                             res.data[i].orderStatus = '未知来源'
                         }
                     }
