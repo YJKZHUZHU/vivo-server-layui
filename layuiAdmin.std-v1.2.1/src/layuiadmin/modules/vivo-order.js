@@ -5,6 +5,7 @@ layui.define([ 'form', 'table'], function (exports) {
     table.render({
         elem: '#LAY-user-manage'
         ,url:'http://localhost:4000/orderList'
+        // ,url:'http://127.20.10.2:4000/orderList'
         ,title: '用户数据表'
         ,cols: [[
             {field:'id', title:'商品ID', sort: true, align: 'center'}
@@ -27,7 +28,6 @@ layui.define([ 'form', 'table'], function (exports) {
             statusCode: 200 //重新规定成功的状态码为 200，table 组件默认为 0
         }
         ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据
-            console.log(typeof  res.data[1].orderStatus)
             for(var i in res.data) {
                 if (res.data[i].orderStatus == '1') {
                     res.data[i].orderStatus = '已付款'
@@ -59,6 +59,7 @@ layui.define([ 'form', 'table'], function (exports) {
             layer.confirm('真的删除该订单吗', function(index){
                 $.ajax({
                     url: 'http://localhost:4000/deleteOrder',
+                    // url:'http://127.20.10.2:4000/deleteOrder',
                     data: params,
                     type: 'post',
                     success: function (res) {
@@ -83,6 +84,7 @@ layui.define([ 'form', 'table'], function (exports) {
     function searchUser(params) {
         $.ajax({
             url: 'http://localhost:4000/searchOrder',
+            // url:'http://127.20.10.2:4000/searchOrder',
             data: params,
             type: 'post',
             success: function (res) {
